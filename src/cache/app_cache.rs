@@ -3,7 +3,7 @@ use sqlx::PgPool;
 use uuid::Uuid;
 
 /// Cache to store roles by name and by id for searching
-struct RolesCache {
+pub struct RolesCache {
     by_name: DashMap<String, Uuid>,
     by_id: DashMap<Uuid, String>,
 }

@@ -17,7 +17,7 @@ CREATE TABLE users (
   username VARCHAR(16) NOT NULL,
   role_id uuid NOT NULL,
   password VARCHAR(128) NOT NULL,
-  subscribed_at TIMESTAMPTZ,  
+  subscribed_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),  
 
   CONSTRAINT fk_role FOREIGN KEY (role_id)
   REFERENCES roles(id)       
